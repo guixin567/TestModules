@@ -26,5 +26,8 @@ android {
 }
 
 dependencies {
+    base_dependencies.forEach{key,value->
+        api value
+    }
     implementation project(path:':base')
 }
