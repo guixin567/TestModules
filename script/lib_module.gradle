@@ -26,5 +26,9 @@ android {
 }
 
 dependencies {
-    implementation project(path:':base')
+    lib_dependencies.each {key,value->
+        implementation value
+    }
+
+    implementation project(path:":common")
 }
