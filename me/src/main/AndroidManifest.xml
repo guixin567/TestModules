@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhengyinuo.me">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application>
-        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name=".main.ui.MainActivity"></activity>
     </application>
 
 </manifest>

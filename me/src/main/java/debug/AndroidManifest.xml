@@ -1,13 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhengyinuo.me">
-    <application
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:theme="@style/Theme.AppCompat.DayNight">
+
         <activity android:name="debug.TestMeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name=".main.ui.MainActivity" />
     </application>
 </manifest>

@@ -1,1 +1,3 @@
-<resources></resources>
+<resources>
+    <string name="str_key5">jump to list</string>
+</resources>

@@ -2,13 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhengyinuo.detail">
 
-    <application
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".DetailActivity"/>
+    <application android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.DetailActivity" />
         <activity android:name="debug.TestDetailActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

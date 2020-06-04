@@ -6,12 +6,15 @@
     android:layout_height="match_parent"
     tools:context="debug.TestListActivity">
 
-    <TextView
-        android:text="Test List"
-        app:layout_constraintStart_toStartOf="parent"
+    <Button
+        android:id="@+id/tv_test"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/str_key5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

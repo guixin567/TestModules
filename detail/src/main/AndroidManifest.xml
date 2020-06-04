@@ -4,7 +4,9 @@
 
     <application>
 
-        <activity android:name=".DetailActivity" />
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.DetailActivity" />
     </application>
 
 </manifest>

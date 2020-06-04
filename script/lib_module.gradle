@@ -1,6 +1,6 @@
-if(is_app){
+if (is_app) {
     apply plugin: 'com.android.application'
-}else{
+} else {
     apply plugin: 'com.android.library'
 }
 apply plugin: 'kotlin-android'
@@ -27,13 +27,22 @@ android {
         }
     }
 
-    sourceSets{
-        main{
-            if(is_app){
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = 1.8
+    }
+
+    sourceSets {
+        main {
+            if (is_app) {
                 manifest.srcFile('src/main/java/debug/AndroidManifest.xml')
-            }else{
+            } else {
                 manifest.srcFile('src/main/AndroidManifest.xml')
-                java{
+                java {
                     exclude 'debug/**'
                 }
             }
@@ -43,9 +52,10 @@ android {
 }
 
 dependencies {
-    lib_dependencies.each {key,value->
+    lib_dependencies.each { key, value ->
         implementation value
     }
 
-    implementation project(path:":common")
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation project(path: ":common")
 }
