@@ -7,6 +7,7 @@ import com.zhengyinuo.base.base.BaseActivity
 import com.zhengyinuo.common.list.InfoBean
 import com.zhengyinuo.common.list.adapter.InfoListAdapter
 import com.zhengyinuo.list.R
+import com.zhengyinuo.list.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.activity_list.*
 
 class ListActivity : BaseActivity() {

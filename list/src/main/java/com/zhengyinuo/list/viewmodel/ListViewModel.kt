@@ -1,9 +1,10 @@
-package com.zhengyinuo.list.ui
+package com.zhengyinuo.list.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.zhengyinuo.base.extension.default
 import com.zhengyinuo.common.list.InfoBean
+import com.zhengyinuo.list.ui.ListActivity
 import route.IntentKey
 import util.DataUtils
 

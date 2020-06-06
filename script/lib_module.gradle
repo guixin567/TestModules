@@ -18,6 +18,11 @@ android {
 
         testInstrumentationRunner lib_android.testInstrumentationRunner
         consumerProguardFiles lib_android.consumerProguardFiles
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -57,5 +62,6 @@ dependencies {
     }
 
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     implementation project(path: ":common")
 }
