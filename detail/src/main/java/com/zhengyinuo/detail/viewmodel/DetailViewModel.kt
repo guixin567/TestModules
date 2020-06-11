@@ -14,7 +14,7 @@ class DetailViewModel : ViewModel() {
 
     fun initData(activity: DetailActivity) {
         initIntent(activity)
-        detailBean.value = DataUtils.getListInfoItems().first { articleId == it.articleId }
+        detailBean.value = DataUtils.getListInfoItems().firstOrNull { articleId == it.articleId }
     }
 
     private fun initIntent(activity: DetailActivity) {
