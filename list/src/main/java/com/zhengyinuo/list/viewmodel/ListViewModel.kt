@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.zhengyinuo.base.extension.default
 import com.zhengyinuo.common.list.InfoBean
 import com.zhengyinuo.list.ui.ListActivity
-import route.IntentKey
+import route.Param
 import util.DataUtils
 
 class ListViewModel : ViewModel() {
@@ -18,6 +18,6 @@ class ListViewModel : ViewModel() {
     }
 
     private fun initIntent(activity: ListActivity) {
-        categoryId = activity.intent.getStringExtra(IntentKey.categoryId).default()
+        categoryId = activity.intent.getStringExtra(Param.categoryId).default()
     }
 }

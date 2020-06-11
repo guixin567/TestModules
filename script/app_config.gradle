@@ -1,7 +1,7 @@
 ext {
 
     //业务层module的类型 true代表以app存在（开发阶段）  false代表以library存在（测试阶段）
-    is_app = true
+    is_app = false
 
     //系统配置
     lib_android = [
@@ -37,5 +37,6 @@ ext {
             glide                        : 'com.github.bumptech.glide:glide:4.11.0',
             lifecycle                    : 'androidx.lifecycle:lifecycle-extensions:2.2.0',
             arouter                      : 'com.alibaba:arouter-api:1.5.0',
+            gson                         : 'com.google.code.gson:gson:2.8.5',
     ]
 }

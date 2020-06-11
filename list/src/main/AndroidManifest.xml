@@ -9,7 +9,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ListActivity" />
+        <activity android:name=".ui.ListActivity">
+            <intent-filter>
+                <data
+                    android:scheme="link"
+                    android:host="test"></data>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

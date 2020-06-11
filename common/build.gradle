@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion lib_android.compileSdkVersion
@@ -14,6 +15,11 @@ android {
 
         testInstrumentationRunner lib_android.testInstrumentationRunner
         consumerProguardFiles lib_android.consumerProguardFiles
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
     }
 
     buildTypes {
@@ -26,8 +32,9 @@ android {
 }
 
 dependencies {
-    base_dependencies.forEach{key,value->
+    base_dependencies.forEach { key, value ->
         api value
     }
-    api project(path:':base')
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
+    api project(path: ':base')
 }

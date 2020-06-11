@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.zhengyinuo.base.extension.default
 import com.zhengyinuo.common.list.InfoBean
 import com.zhengyinuo.detail.ui.DetailActivity
-import route.IntentKey
+import route.Param
 import util.DataUtils
 
 class DetailViewModel : ViewModel() {
@@ -18,6 +18,6 @@ class DetailViewModel : ViewModel() {
     }
 
     private fun initIntent(activity: DetailActivity) {
-        articleId = activity.intent.getStringExtra(IntentKey.articleId).default()
+        articleId = activity.intent.getStringExtra(Param.articleId).default()
     }
 }

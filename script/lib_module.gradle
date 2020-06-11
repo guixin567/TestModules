@@ -5,6 +5,7 @@ if (is_app) {
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion lib_android.compileSdkVersion
@@ -18,11 +19,12 @@ android {
 
         testInstrumentationRunner lib_android.testInstrumentationRunner
         consumerProguardFiles lib_android.consumerProguardFiles
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
             }
         }
+
     }
 
     buildTypes {
@@ -61,7 +63,7 @@ dependencies {
         implementation value
     }
 
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
     implementation project(path: ":common")
 }

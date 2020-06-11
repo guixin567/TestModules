@@ -25,7 +25,7 @@ class HomeListProvider(private val listener: BaseHomeAdapterListener) :
             layoutManager = LinearLayoutManager(context)
             adapter = InfoListAdapter().apply {
                 setNewInstance(item.beans)
-                setOnItemChildClickListener { adapter, _, position ->
+                setOnItemClickListener { adapter, _, position ->
                     val bean = adapter.data[position] as InfoBean
                     listener.onBottomListClick(bean.articleId)
                 }

@@ -16,8 +16,8 @@ class DataUtils {
         fun getHomeBannerBean(): HomeBannerBean {
             return HomeBannerBean(
                 banners = mutableListOf(
-                    BannerItemBean(imageUrl1),
-                    BannerItemBean(imageUrl2)
+                    BannerItemBean(imageUrl1, "1111"),
+                    BannerItemBean(imageUrl2, "2222")
                 )
             )
         }
